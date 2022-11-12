@@ -22,28 +22,24 @@ nav a {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-nav img {
+nav .nav_logo img {
     height: 2.2rem;
     width: auto;
-    margin: 0 -1rem 0 1rem;
+    margin: 0.25rem -1rem 0 1rem;
 }
 
 nav .nav_center {
-    margin-top: 0.25rem;
-    padding: 0 1rem;
+    margin-top: 0.5rem;
     display: flex;
-    height: 2.2rem;
-    border-radius: 1rem;
-    background-color: #1a303d;
+    height: auto;
 }
 
 nav .nav_center ul {
     display: flex;
     list-style: none;
-    margin-top: 0.25rem;
 }
 
-nav .nav_center a{
+nav .nav_center a {
     vertical-align: middle;
     display: inline-block;
     position: relative;
@@ -51,15 +47,18 @@ nav .nav_center a{
     padding: 0.25rem 1rem;
 }
 
-nav .login {
-    margin: 0.75rem 1rem 0 -1rem
+nav .nav_center img {
+    height: 1.25rem;
+    width: auto;
 }
 
-nav .login a{
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    color:#2e5c74;
+nav .nav_center .pesquisar a {
+    padding: 0;
+    margin: 0.25rem 2rem;
+}
+
+nav .nav_center .mais_a_direita {
+    margin-right: -1rem;
 }
 
 nav .nav_center .line1 a:after {
@@ -67,7 +66,7 @@ nav .nav_center .line1 a:after {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 0.95rem;
+    height: 0.4rem;
     bottom: 0;
     left: 0;
     transform-origin: bottom right;
@@ -84,7 +83,7 @@ nav .nav_center .line2 a:after {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 0.95rem;
+    height: 0.4rem;
     bottom: 0;
     left: 0;
     transform-origin: bottom right;
@@ -96,21 +95,50 @@ nav .nav_center .line2 a:hover:after {
     transform-origin: bottom left;
 }
 
-nav .login a:after {
-    content: '_____';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 0.8rem;
-    bottom: 0;
-    left: 0;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease;
+nav .nav_center .pesquisar img:hover {
+    height: 1.5rem;
+    transition: 0.2s ease;
 }
 
-nav .login a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+nav .nav_right {
+    margin: 0.6rem 1.5rem 0 -1rem;
+}
+
+nav .nav_right .login {
+    background-image: linear-gradient(
+    to right,
+    #14496b ,
+    #14496b 50%,
+    white 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .nav_right .login:before{
+    content: '_____';
+    background: #14496b;
+    display: block;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0;
+    height: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .nav_right .login:hover {
+    background-position: 0;
+}
+
+nav .nav_right .login:before {
+    width: 100%;
 }
 
 .background {
@@ -120,10 +148,7 @@ nav .login a:hover:after {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
-    background-image: url(./img/solo\ leveling\ background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #021e30;
 }
 
 body::-webkit-scrollbar {
