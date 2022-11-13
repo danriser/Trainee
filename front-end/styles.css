@@ -476,6 +476,11 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 3rem;
 }
 
+.catálogo ul li{
+    display: flex;
+    flex-direction: column;
+}
+
 .catálogo ul img{
     height: 16rem;
     width: 12rem;
@@ -518,6 +523,22 @@ body::-webkit-scrollbar-thumb {
 .catálogo .obra:active{
     box-shadow: #00E6F6 7px 7px 7px;
     transform: translateY(2px);
+}
+
+.catálogo ul .titulo{
+    color: #fff;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    padding: auto;
+    margin: auto;
+    height: auto;
+    max-width: 10rem;
+}
+
+.catálogo ul .titulo:hover{
+    color:#00E6F6;
+    transition: all 0.2s ease;
 }
 
 .catálogo button{
@@ -564,4 +585,34 @@ body::-webkit-scrollbar-thumb {
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
+}
+
+footer{
+    color: #CCCCCC;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 0.75rem 0;
+}
+
+footer img{
+    height: 1rem;
+    margin: 0 0.25rem
+}
+
+footer a{
+    color: #CCCCCC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .footer_bottom a{
+    vertical-align: middle;
+}
+
+footer .footer_top{
+    margin-left: 0.5rem;
+}
+
+footer .footer_bottom{
+    margin-right: 0.25rem;
 }
