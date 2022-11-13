@@ -488,7 +488,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .catálogo .obra{
-    margin: 0 0.75rem 0.75rem 0.75rem;
+    margin: 0 0.75rem 0.3rem 0.75rem;
     text-decoration: none;
     border-radius: 1rem;
     cursor: pointer;
@@ -532,6 +532,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     padding: auto;
     margin: auto;
+    margin-bottom: 1.5rem;
     height: auto;
     max-width: 10rem;
 }
@@ -566,7 +567,7 @@ body::-webkit-scrollbar-thumb {
     vertical-align: baseline;
     width: auto;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .catálogo button:hover, .catálogo button:focus{
@@ -611,6 +612,7 @@ footer .footer_bottom a{
 
 footer .footer_top{
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 footer .footer_bottom{
