@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
+main {
+    overflow: hidden;
+}
+
 body {
-    background-color:#042032;
+    background-color:#011E2C;
 }
 
 nav {
+    z-index: 1;
     width: 100%;
     height: 3.5rem;
-    position: fixed;
+    position: sticky;
     overflow: hidden;
     top: 0;
     margin: 0;
@@ -47,6 +52,7 @@ nav .nav_center ul {
 }
 
 nav .nav_center a {
+    overflow: visible;
     vertical-align: middle;
     display: inline-block;
     position: relative;
@@ -202,11 +208,9 @@ nav .nav_mobile {
     nav .nav_mobile .pesquisar_mobile {
         margin: 0.4rem 0.75rem 0rem 0rem;
     }
-
     nav .nav_mobile a {
         cursor: pointer;
     }
-
 }
 
 body::-webkit-scrollbar {
@@ -221,5 +225,235 @@ body::-webkit-scrollbar-button {
 
 body::-webkit-scrollbar-thumb {
     background: #333333;
+}
+
+.welcome{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: auto;
+    width: 100vw;
+    background-image: url(./img/Wallpaper-Anime-Solo-Leveling-Sung-Jin-Woo-1920x1080px19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4.5rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px){
+    .welcome{
+        background-image: none;
+    }
+}
+
+.welcome .apresentação {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.welcome #welcome_top {
+    box-shadow: 10px 10px 15px #010F18;
+    width: 38rem;
+    height: 10%;
+    border-radius: 2rem;
+    margin: 2rem 3rem 3rem 1rem;
+    background-color: #010F18;
+}
+
+@media only screen and (max-width:650px){
+    .welcome #welcome_top {
+        width: 90%;
+    }
+}
+
+.welcome h1{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.welcome ul{
+    margin-left: 4rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 4rem;
+}
+
+.welcome ul li{
+    display: flex;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.welcome ul #gps img{
+    height: 1rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.welcome ul #entrega img{
+    height: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.welcome ul #coração img{
+    height: 0.95rem;
+    margin-right: 1rem;
+}
+
+.welcome ul p{
+    color: white;
+}
+
+.welcome h2{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.7rem;
+    text-align: left;
+    margin-top: 0.25rem;
+}
+
+.welcome .buttons img{
+    height: 1rem;
+}
+
+.welcome .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.welcome button{
+    border-radius: 5px;
+    height: 20px;
+    padding-bottom: 5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.button_community, .button_community:after{
+    width: 140px;
+    height: 76px;
+    line-height: 76px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #010F18 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 4px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button_community:after{
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    content: 'Servidor';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #010F18 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+.button_community:hover:after{
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .button_community, .button_community:after {
+        width: 200px;
+        height: 86px;
+        line-height: 88px;
+    }
+  }
+
+.catálogo{
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.catálogo h1{
+    display: flex;
+    color: white;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-bottom: #fff solid;
+    margin-left: 2rem;
+    width: auto;
+    flex-wrap: wrap;
 }
 
