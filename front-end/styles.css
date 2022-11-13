@@ -314,6 +314,16 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
+.welcome #welcome_bottom{
+    height: 10rem;
+}
+
+@media only screen and (max-width: 417.99px){
+    .welcome #welcome_bottom{
+        height: auto;
+    }
+}
+
 .welcome h2{
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -429,13 +439,13 @@ body::-webkit-scrollbar-thumb {
     }
   }
   
-  @media (min-width: 700px) {
+@media (min-width: 700px) {
     .button_community, .button_community:after {
         width: 200px;
         height: 86px;
         line-height: 88px;
     }
-  }
+}
 
 .catálogo{
     display: flex;
@@ -473,6 +483,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .catálogo .obra{
+    margin: 0 0.75rem 0.75rem 0.75rem;
     text-decoration: none;
     border-radius: 1rem;
     cursor: pointer;
